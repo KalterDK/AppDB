@@ -3,8 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-Hello, World!
+
+<section>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>User</th>
+            <th>Action</th>
+            <th>Time</th>
+        </tr>
+        </thead>
+        {% for act in act %}
+        <tr>
+            <th>{{ act.user }}</th>
+            <th>{{ act.type }}</th>
+            <th>{{ act.timestamp }}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</section>
+
+
+<script src="/static/js/bootstrap.min.js"></script>
 </body>
 </html>

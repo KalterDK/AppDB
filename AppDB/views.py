@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from models import *
 
 
 def render_tamplate(tpl, dt, request):
@@ -14,4 +15,5 @@ def render_tamplate(tpl, dt, request):
 
 
 def home(request):
-    return render_tamplate('index.html', {}, request)
+    activity = OcActivity.objects.all()
+    return render_tamplate('index.html', {'act':activity}, request)
