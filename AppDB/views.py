@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from models import *
+from .forms import *
 
 
 def render_tamplate(tpl, dt, request):
@@ -16,4 +16,5 @@ def render_tamplate(tpl, dt, request):
 
 def home(request):
     activity = OcActivity.objects.all()
-    return render_tamplate('index.html', {'act':activity}, request)
+    form = DataTableForm()
+    return render_tamplate('index.html', {'act': activity, 'form': form}, request)
