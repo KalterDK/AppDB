@@ -4,3 +4,4 @@ AppDB/DS_Store
 .idea/*
 __pycache__
 AppDB/__pycache__
+.idea/workspace.xml
