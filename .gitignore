@@ -1,1 +1,6 @@
-cd
+*.pyc
+.DS_Store
+AppDB/DS_Store
+.idea/*
+__pycache__
+AppDB/__pycache__
